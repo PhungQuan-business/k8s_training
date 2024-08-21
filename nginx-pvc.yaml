@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nginx-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce # đổi cái này để tạo ra lỗi unbound
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: manual

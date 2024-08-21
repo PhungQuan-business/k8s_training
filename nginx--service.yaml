@@ -1,0 +1,14 @@
+nginx-service.yaml" 14L, 223C                                                  6,16          All
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  type: NodePort # Thay đổi cái này
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30001
